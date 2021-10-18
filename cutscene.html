@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutscene</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        background-color: black;
+      }
+      #level2{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 10%;
+        top: 10%;
+        width: 80%;
+        height: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <video id="level2" autoPlay muted>
+        <source src="LEVEL 3.mp4" type="video/mp4">
+    </video>
+    <audio autoplay>
+      <source src="LEVEL 3.mp3" type="audio/mp3">
+    </audio>
+    <script>
+      window.onload = function isPlaying(audelem) { return !audelem.paused; }
+      video = document.getElementById('level2')
+      video.onended = function() {
+        window.location.replace("battle.html");
+      };
+    </script>
+  </body>
+</html>

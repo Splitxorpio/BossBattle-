@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Boss-Battler</title>
+    <script src='script.js' defer></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css'>
+    <link rel='stylesheet' href='style.css'></link>
+    <audio id="Audio">
+      <source src="bossmusic.mp3" type="audio/mp3">
+    </audio>
+</head>
+<body style='background-color: rgb(24, 61, 93);'>
+    <h1 class='title'><strong>Boss Battler 👹</strong></h1>
+    <main>
+        <div>
+            <section id="health-levels">
+            <h3>BOSS HEALTH</h3>
+            <progress id="monster-health" max="1000" value="1000">100%</progress>
+            <br></br>
+            <h3>PLAYER HEALTH</h3>
+            <progress id="player-health" max="100" value="100">100%</progress>
+            <h3>PLAYER MANA</h3>
+            <progress id="player-mana" max="100" value="100">100%</progress>
+          </section>
+            <div class ='buttoncenter'>
+            <button class='attack' id='attack-btn'>🪓 Attack</button></div>
+            <div class ='buttoncenter'>
+            <button class='heal' id='heal-btn'>💝 Heal</button></div>
+            <div class ='buttoncenter'>
+            <button class='heal' id='reset-btn'>♻ Reset</button></div>
+        </div>
+        <!--for the acutall animations and such-->
+        <div id ="myContainer">
+            <img id="dog" src="dog.png">
+            <img id="dragon" src="dragon.png">
+            <!-- <div id ="myAnimation"></div> -->
+        </div>
+        <script>
+          var gfg = document.getElementById("Audio");
+          window.onload = function Set_vol1() { 
+              gfg.volume = 0.1;
+          } 
+        </script>
+    </main>
+</body>
+</html>
